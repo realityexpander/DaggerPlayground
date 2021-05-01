@@ -1,4 +1,4 @@
-package com.example.daggerplayground;
+package com.example.daggerplayground.car;
 
 import android.util.Log;
 
@@ -10,7 +10,7 @@ public class Remote {
     
     @Inject
     public Remote() {
-        
+        Log.d(TAG, "Remote: remote created");
     }
     
     public void setListener(Car car) {

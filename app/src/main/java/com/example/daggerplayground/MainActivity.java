@@ -5,6 +5,10 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.daggerplayground.DI.CarComponent;
+import com.example.daggerplayground.DI.DaggerCarComponent;
+import com.example.daggerplayground.car.Car;
+
 import javax.inject.Inject;
 
 public class MainActivity extends AppCompatActivity {

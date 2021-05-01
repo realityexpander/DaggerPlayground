@@ -1,4 +1,4 @@
-package com.example.daggerplayground;
+package com.example.daggerplayground.car;
 
 import android.util.Log;
 
@@ -22,6 +22,7 @@ public class Car {
     }
 
     public void drive() {
+        engine.startEngine();
         Log.d(TAG, "drive: driving...");
     }
 }

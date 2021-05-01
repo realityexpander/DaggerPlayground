@@ -2,8 +2,8 @@ package com.example.daggerplayground
 
 //import android.os.Bundle
 //import androidx.appcompat.app.AppCompatActivity
-//import com.example.daggerplayground.Car
-//import com.example.daggerplayground.CarComponent
+//import com.example.daggerplayground.car.Car
+//import com.example.daggerplayground.DI.CarComponent
 //import com.example.daggerplayground.DaggerCarComponent
 //import javax.inject.Inject
 
