@@ -10,7 +10,7 @@ public class DieselEngine implements Engine {
 
     private int horsePower;
 
-    @Inject
+    @Inject  // use @Inject here if also @Provide-ing horsePower in the @Module
     public DieselEngine(int horsePower) {
         Log.d(TAG, "DieselEngine: engine created with horsePower=" + horsePower);
         this.horsePower = horsePower;

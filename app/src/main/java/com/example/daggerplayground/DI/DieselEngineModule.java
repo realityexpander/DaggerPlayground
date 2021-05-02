@@ -18,22 +18,22 @@ public class DieselEngineModule {
         this.horsePower = horsePower;
     }
 
-//    @Provides
-//    Engine provideEngine(DieselEngine engine) { // ok to use static, bc no need to instantiate DieselEngineModule object
-//        return engine;
-//    }
-
-//     Works the same as above, but allows parameters to be passed in to the engine (horsePower)
     @Provides
-    Engine provideEngine() {       // cant be static, bc it depends on a object instance var (horsePower), also no need to provide the engine, since we are instantiating the engine here
-        Engine engine = new DieselEngine(this.horsePower);     // DieselEngine is a 3rd party library, so we have to "Provide" it indirectly
+    Engine provideEngine(DieselEngine engine) { // ok to use static, bc no need to instantiate DieselEngineModule object; also horsePower is provided below
         return engine;
     }
 
+////     Works the same as above, but allows parameters to be passed in to the engine (horsePower)
 //    @Provides
-//    int provideHorsePower() {
-//        return this.horsePower;
+//    Engine provideEngine() {       // cant be static, bc it depends on a object instance var (horsePower), also no need to provide the engine, since we are instantiating the engine here
+//        Engine engine = new DieselEngine(this.horsePower);     // DieselEngine is a 3rd party library, so we have to "Provide" it indirectly
+//        return engine;
 //    }
+
+    @Provides
+    int provideHorsePower() {
+        return this.horsePower;
+    }
 }
 
 

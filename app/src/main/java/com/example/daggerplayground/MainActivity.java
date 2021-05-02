@@ -23,7 +23,9 @@ public class MainActivity extends AppCompatActivity {
 
 //        CarComponent component = DaggerCarComponent.create(); // only for components that take no parameters
         CarComponent component = DaggerCarComponent.builder()
-                .dieselEngineModule(new DieselEngineModule(500) ) // must use the builder to include parameters
+//                .dieselEngineModule(new DieselEngineModule(500) ) // must use the builder to include parameters
+                .horsePower(500)
+                .cylinders(6) // for PetrolEngine
                 .build();
         component.inject(this);
 
