@@ -14,7 +14,7 @@ public class PetrolEngine implements Engine {
     @Inject
     public PetrolEngine(@Named("horsePower") int horsePower,
                         @Named("cylinders") int cylinders) {
-        Log.d(TAG, "PetrolEngine: engine created");
+        Log.d(TAG, "PetrolEngine: engine created: " + this);
         this.horsePower = horsePower;
         this.cylinders = cylinders;
     }

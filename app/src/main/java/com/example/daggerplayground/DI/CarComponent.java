@@ -4,10 +4,12 @@ import com.example.daggerplayground.MainActivity;
 import com.example.daggerplayground.car.Car;
 
 import javax.inject.Named;
+import javax.inject.Singleton;
 
 import dagger.BindsInstance;
 import dagger.Component;
 
+@Singleton // If any module objects has been marked as Singleton, the component must be marked as a Singleton as well (even though not every Provided object is a singleton)
 @Component(modules = {WheelsModule.class, PetrolEngineModule.class  /* or */ /* DieselEngineModule.class */ })  // @Component defines the "modules" where to find the "@Provides" for the libraries that we don't have direct access to source-code.
 public interface CarComponent {
 
