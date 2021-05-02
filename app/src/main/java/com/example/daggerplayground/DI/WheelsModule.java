@@ -8,7 +8,7 @@ import dagger.Module;
 import dagger.Provides;
 
 @Module
-public class WheelsModule {
+public abstract class WheelsModule { // if all the methods are static, this Module class should be abstract
 
     @Provides
     static Rims provideRims() {         // ok to use static, bc no need to instantiate WheelsModule object
