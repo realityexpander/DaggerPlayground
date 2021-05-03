@@ -22,11 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 //        CarComponent component = DaggerCarComponent.create(); // only for components that take no parameters
-        CarComponent component = DaggerCarComponent.builder()  // @Singleton only works within the same component, if another component is created, another set of singletons are created
-//                .dieselEngineModule(new DieselEngineModule(500) ) // must use the builder to include parameters
-                .horsePower(500)
-                .cylinders(6) // for PetrolEngine
-                .build();
+        CarComponent component = ( (ExampleApp) getApplication()).getAppComponent();
         component.inject(this);
 
         car1.drive();
