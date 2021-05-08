@@ -6,6 +6,9 @@ import com.example.daggerplayground.DI.ActivityComponent;
 import com.example.daggerplayground.DI.AppComponent;
 import com.example.daggerplayground.DI.DaggerAppComponent;
 
+// From CodingInFlow
+
+
 public class ExampleApp extends Application {
 
     private AppComponent component;
